@@ -12,9 +12,9 @@ public class Pizza {
 	public Pizza() {
 		
 	}
-	public Pizza(String nome, BigDecimal preco, List<Ingrediente> ingredientes) {		
+	public Pizza(String nome, BigDecimal precoBase, List<Ingrediente> ingredientes) {		
 		this.nome = nome;
-		this.preco = preco;
+		this.preco = precoBase;
 		this.ingredientes = ingredientes;
 	}
 	public Long getId() {
