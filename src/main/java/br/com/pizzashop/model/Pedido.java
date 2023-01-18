@@ -1,46 +1,77 @@
 package br.com.pizzashop.model;
 
-import java.time.LocalDateTime;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public class Pedido {
-	private Long idPedido;
-	private Long idCliente;
-	private Long idItemPedido;
-	private LocalDateTime datahora;
+	private int ped_cod;
+	private LocalDate ped_data;
+	private BigDecimal ped_total;	
+	private Cliente cliente;
+	private Funcionarios funcionario;
+	private Entregador entregador;
+	
 	public Pedido() {
 		
 	}
-	public Pedido(Long idCliente, Long idItemPedido, LocalDateTime datahora) {
+
+	public Pedido(LocalDate ped_data, BigDecimal ped_total, Cliente cliente, Funcionarios funcionario,
+			Entregador entregador) {
 		
-		this.idCliente = idCliente;
-		this.idItemPedido = idItemPedido;
-		this.datahora = datahora;
+		this.ped_data = ped_data;
+		this.ped_total = ped_total;
+		this.cliente = cliente;
+		this.funcionario = funcionario;
+		this.entregador = entregador;
 	}
-	public Long getIdPedido() {
-		return idPedido;
+
+	public int getPed_cod() {
+		return ped_cod;
 	}
-	public void setIdPedido(Long idPedido) {
-		this.idPedido = idPedido;
+
+	public void setPed_cod(int ped_cod) {
+		this.ped_cod = ped_cod;
 	}
-	public Long getIdCliente() {
-		return idCliente;
+
+	public LocalDate getPed_data() {
+		return ped_data;
 	}
-	public void setIdCliente(Long idCliente) {
-		this.idCliente = idCliente;
+
+	public void setPed_data(LocalDate ped_data) {
+		this.ped_data = ped_data;
 	}
-	public Long getIdItemPedido() {
-		return idItemPedido;
+
+	public BigDecimal getPed_total() {
+		return ped_total;
 	}
-	public void setIdItemPedido(Long idItemPedido) {
-		this.idItemPedido = idItemPedido;
+
+	public void setPed_total(BigDecimal ped_total) {
+		this.ped_total = ped_total;
 	}
-	public LocalDateTime getDatahora() {
-		return datahora;
+
+	public Cliente getCliente() {
+		return cliente;
 	}
-	public void setDatahora(LocalDateTime datahora) {
-		this.datahora = datahora;
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
-	
+
+	public Funcionarios getFuncionario() {
+		return funcionario;
+	}
+
+	public void setFuncionario(Funcionarios funcionario) {
+		this.funcionario = funcionario;
+	}
+
+	public Entregador getEntregador() {
+		return entregador;
+	}
+
+	public void setEntregador(Entregador entregador) {
+		this.entregador = entregador;
+	}
 	
 	
 	
